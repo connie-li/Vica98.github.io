@@ -1,121 +1,25 @@
-<html>
-	<head>
-		<title> Nick's first web page </title>
-	</head>
-
-	<body>
-            <p id = "Bear">
-            </p>
-            <button type="button" onClick=Back() id = "Back">Back</button>
-			<img src="https://ae01.alicdn.com/kf/HTB1OCJmH3aTBuNjSszfq6xgfpXa2.jpg" id = "Picture" height = "300">
-            <button type="button" onClick=Next() id = "Next">Next</button>
-		<br>
-            <button type="button" onClick=Back1() id = "Back">Back</button>
-			<img src="https://images.express.com/is/image/expressfashion/35_383_2882_098_01?cache=on&wid=960&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon" id = "Picture1" height = "300">
-            <button type="button" onClick=Next1() id = "Next">Next</button>
-			
-			<a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/pinterest/official-news/"></a>
-			
-			
-            <script type ="text/javascript">
-            var num = 0;
-			var num1 = 0;
-			function Back1()
-            {
-				num1--;
-				if(num1<0)
-				{
-					num1=4;
-				}
-				GetPic();
-            }
-            function Next1()
-            {
-            	num1++;
-            	if(num1>4)
-				{
-					num1 = 0;
-				}
-				GetPic();
-            }
-            function Back()
-            {
-            	num--;
-              if(num<0)
-              {
-              	num=4;
-              }
-              GetPic();
-            }
-            function Next()
-            {
-            	num++;
-            	if(num>4)
-              {
-              	num = 0;
-              }
-              GetPic();
-            }
-            function GetPic()
-            { 
-				switch(num)
-				{
-					case 0:
-					  document.getElementById("Picture").src="https://ae01.alicdn.com/kf/HTB1OCJmH3aTBuNjSszfq6xgfpXa2.jpg";
-					  break;
-					case 1:
-					document.getElementById("Picture").src="https://img2.newchic.com/thumb/large/oaupload/newchic/images/11/98/c394231f-f5be-a473-127d-dbb8df3bc368.jpg";
-					  break;
-					case 2:
-					document.getElementById("Picture").src="https://gloimg.twkcdn.com/td/2015/201508/source-img/1440541687783-P-3017805.jpg";
-					  break;
-					case 3:
-					document.getElementById("Picture").src="https://www.dhresource.com/0x0s/f2-albu-g5-M00-0E-91-rBVaJFl-kK6ANhTIAANSBdL7qVM816.jpg/2018-men-dress-shirts-men-039-s-casual-shirt.jpg";
-						break;
-					case 4:
-					document.getElementById("Picture").src="https://img2.newchic.com/thumb/view/oaupload/newchic/images/04/0C/a929076f-1a73-404d-a0f4-54b42af109a6.jpg";
-						break;
-					 default:
-						break;
-				}
-				switch(num1)
-				{
-					case 0:
-					  document.getElementById("Picture1").src="https://images.express.com/is/image/expressfashion/35_383_2882_098_01?cache=on&wid=960&fmt=jpeg&qlt=85,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon";
-					  break;
-					case 1:
-					document.getElementById("Picture1").src="https://images-na.ssl-images-amazon.com/images/I/61ZfJpbaQiL._SY445_.jpg";
-					  break;
-					case 2:
-					document.getElementById("Picture1").src="https://ak1.ostkcdn.com//images/products/10657931/Elie-Balleh-Mens-Slim-Fit-Dress-Pants-07678f23-6959-4373-b059-8ab05b54458d.jpg";
-					  break;
-					case 3:
-					document.getElementById("Picture1").src="https://ak1.ostkcdn.com//images/products/9028403/Perry-Ellis-Mens-Slim-Fit-Grey-Plaid-Flat-Front-Dress-Pants-07cef57e-ef73-43b4-a252-76671978cd43.jpg";
-						break;
-					case 4:
-					document.getElementById("Picture1").src="https://images.express.com/is/image/expressfashion/0035_03073320_0826?cache=on&wid=361&fmt=jpeg&qlt=75,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon";
-						break;
-					 default:
-						break;
-				}
-            }
-			//pinterest
-			window.pAsyncInit = function() {
-				PDK.init({
-					appId: "<4995622703881803559>", // Change this
-					cookie: true
-				});
-			};
-		(function(d, s, id){
-			var js, pjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {return;}
-			js = d.createElement(s); js.id = id;
-			js.src = "//assets.pinterest.com/sdk/sdk.js";
-			pjs.parentNode.insertBefore(js, pjs);
-		}(document, 'script', 'pinterest-jssdk'));
-        </script>
-		
-		<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
-		
-	</body>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | WeMeet3D</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebBuilds.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">WeMeet3D</div>
+      </div>
+    </div>
+  </body>
 </html>
